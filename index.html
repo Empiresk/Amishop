@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produit</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="product">
+        <div class="color-buttons">
+            <div id="black" class="color-button" onclick="changeProductImage('black')"></div>
+            <div id="green" class="color-button" onclick="changeProductImage('green')"></div>
+        </div>
+        <img id="productImageBlack" src="https://i.imgur.com/cVGqude.jpeg" alt="Produit Noir">
+        <img id="productImageGreen" src="https://i.imgur.com/7nAsNmE.jpeg" alt="Produit Vert">
+        <p class="description">Voici la description du produit. Il est très beau et de haute qualité.</p>
+
+        <form id="productForm" class="form">
+            <div class="form-group">
+                <input type="text" id="name" name="name" placeholder="Nom" required>
+            </div>
+            <div class="form-group">
+                <input type="tel" id="phone" name="phone" placeholder="Numéro de Téléphone" required>
+            </div>
+            <div class="form-group">
+                <select id="size" name="size" required>
+                    <option value="" disabled selected hidden>Taille</option>
+                    <option value="X">X</option>
+                    <option value="XL">XL</option>
+                    <option value="XXL">XXL</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <select id="wilaya" name="wilaya" required>
+                    <option value="" disabled selected hidden>Wilaya de Livraison</option>
+                    <option value="Adrar">Adrar</option>
+                    <option value="Alger">Alger</option>
+                    <option value="Oran">Oran</option>
+                    <option value="Bouira">Bouira</option>
+                    <option value="Chelf">Chelf</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="text" id="price" name="price" readonly>
+            </div>
+            <button type="submit" class="submit-button">Commander</button>
+        </form>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>
